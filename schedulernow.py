@@ -1,7 +1,7 @@
 # THIS IS ALL THE CLICKING CODE
 
+# Importing all the required python libraries
 import pyautogui, schedule, time
-# from gtts import gTTS
 from playsound import playsound
 import tkinter as tk
 from tkinter import Button, Tk, mainloop, StringVar, Label, RAISED
@@ -9,9 +9,11 @@ from tkinter import Button, Tk, mainloop, StringVar, Label, RAISED
 # Making a class because it's cool
 # Following the saying, "Don't repeat more than once"
 
+# You can change all the values of x-axis and y-axis according to your need
+# Just put "pyautogui.displayMousePosition()" to get the values
 class Starters():
     
-    # Doing all the clicking to open Whatsapp
+    # Doing all the clicking to open Whatsapp to read chats
     def groupchatsearch(groupname, searchchat):
         # Mouse location for Whatsapp logo(X:  243 Y: 1058 )
         pyautogui.click(x = 243, y = 1058, interval = 14)
@@ -40,7 +42,7 @@ class Starters():
             pyautogui.click(x = 950, y = i)
         
         
-    # Clicking on the zoom links
+    # Clicking on the zoom links from the chats for higher automation
     def linkpress(y1, y2, y3, y4, y5, y6):
         pyautogui.click(x = 725, y = y1, interval = 2)
         pyautogui.click(x = 805, y = y2)
@@ -52,33 +54,34 @@ class Starters():
         for i in range(300,900, 4):
             pyautogui.click(x = 950, y = i)
 
-# Prompts Class for derivation
+# Prompts Class for derivation 
+# It will mainly open all the links depending on the Teacher's name and your class
 class Prompts():
     
     # History derivataticon
     def historyid():  
         # Function to enter group name and searching through chats
-        Starters.groupchatsearch('Class 10-B', 'Shikha Walia is inviting you to a scheduled Zoom meeting')
+        Starters.groupchatsearch('Group_Name', 'Your_teachers_name is inviting you to a scheduled Zoom meeting')
         # Pressing the links of zoom
         Starters.linkpress(545, 555, 565, 575, 585, 595)
 
     # Maths derivation
     def mathsid():
         # Function to enter group name and searching through chats
-        Starters.groupchatsearch('Class 10-B', 'Pintu Prasad is inviting you to a scheduled Zoom meeting')
+        Starters.groupchatsearch('Group_Name', 'Your_teachers_name is inviting you to a scheduled Zoom meeting')
         # Pressing the links of zoom
         Starters.linkpress(655, 665, 670, 675, 685, 695)
         
     # Chemistry derivation
     def chemistryid():
         # Function to enter group name and searching through chats
-        Starters.groupchatsearch('Chemistry Class 10B', 'Join Zoom Meeting')
+        Starters.groupchatsearch('Group_Name', 'Join Zoom Meeting')
         # Pressing the links of zoom
         Starters.linkpress(470, 475, 480, 487, 495, 505)
         
     def physicsid():
         # Function to enter group name and searching through chats
-        Starters.groupchatsearch('Class 10-B', 'NITINJEET MAHAL is inviting you to a scheduled Zoom meeting.')
+        Starters.groupchatsearch('Group_Name', 'Your_teachers_name is inviting you to a scheduled Zoom meeting.')
         # Pressing the links of zoom
         Starters.linkpress(665, 676, 687, 698, 709, 720)
         
@@ -168,8 +171,9 @@ def schedulenow():
         schedule.run_pending()
         time.sleep(1)
         
-# CREATING THE GOLDEN KEYWORD EVERYONE WAS WAITING FOR
         
+# MAKING THE APPLICATION FOR NOT NEEDING TO UNDERSTAND THE CODE
+# CREATING THE GOLDEN KEYWORD EVERYONE WAS WAITING FO
 # Requirement
 root = Tk()
 
